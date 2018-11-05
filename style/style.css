@@ -1,0 +1,138 @@
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+}
+
+nav{
+	background: #111;
+	overflow: hidden;
+}
+
+.Logo{
+	float: left;
+
+}
+
+
+ul#forDropDown{
+	list-style: none;
+	margin: 0;
+	display: block;
+	padding: 1em 0 0 0;
+	margin-top: -100%;
+	border-top: .2px solid white;
+	z-index: -100;
+	position: absolute;
+	width: 100%;
+	background: #111;
+	transition: .3s ease-out;
+	height: 300px;
+}
+
+
+
+a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.1em;
+	font-family: "verdana";
+	min-height: 15px;
+}
+
+
+ ul#forDropDown a{
+	padding: 15px 20px 15px 20px;	
+	display: block;
+
+}
+ul#forDropDown.slideDown{
+	margin-top: 70px;
+}
+
+
+a:hover, a#Home{
+	background: rgb(20, 100, 100);
+	border-bottom: 5px solid rgb(20,190,100);
+
+}
+
+
+#toggler{
+	float: right;
+	margin: 10px 20px 0 0 ;
+	cursor: pointer;
+	transition: .2s;
+	transform: rotate(0deg);
+}
+
+#toggler div{
+	height: 2px;
+	width: 25px;
+	margin: 10px;
+	background: white;
+	
+	
+
+}
+#toggler div:nth-child(1).topDisappear{
+	opacity: 0;
+	transition: .1s;
+}
+
+#toggler div:nth-child(2).midTurn{
+	transform: translateY(4px) rotate(43deg);
+}
+
+#toggler div:nth-child(3).endTurn{
+	transform: translateY(-8px) rotate(-43deg);
+
+}
+
+#toggler.rotateOnToggle{
+	transform: rotate(90deg);
+}
+
+#forDesktop{
+	display: none;
+}
+
+
+
+@media(min-width: 600px){
+
+
+ul#forDropDown{
+	display: none;
+}
+
+ul#forDesktop{
+	
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	margin-right: 50px;
+	margin-top: 25px;
+	border: none;
+	list-style: none;
+
+	
+}
+
+
+ #forDesktop a{
+	display: inline;
+	padding: 30px 20px 26px 20px;	
+}
+
+
+#toggler{
+	display: none;
+}
+
+
+
+}
+
